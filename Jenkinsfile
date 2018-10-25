@@ -16,7 +16,7 @@ pipeline {
                 script {
                     app = docker.build("backupbeta/train-schedule")
                     app.inside {
-                        sh 'echo $(curl localhost:8080)'
+                        sh 'echo $(curl http://54.254.216.111:8080)'
                     }
                 }
             }
